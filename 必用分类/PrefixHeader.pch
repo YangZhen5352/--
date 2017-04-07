@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  网易测试程序
+//
+//  Created by apple on 15/11/21.
+//  Copyright © 2015年 itheima. All rights reserved.
+//
+
+
+
+#import "UIView+HMExtension.h"
+#import "YYConst.h"
+
+/** 自定义Log */
+#ifdef DEBUG
+#define YYLog(...) NSLog(__VA_ARGS__)
+#else
+#define YYLog(...)
+#endif
+
+#define YYRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define HMARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define YYRandomColor YYRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define YYNoteCenter [NSNotificationCenter defaultCenter]
